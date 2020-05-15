@@ -1,0 +1,10 @@
+.products-page {
+    padding: 20px 40px;
+}
+
+.products-page-panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
