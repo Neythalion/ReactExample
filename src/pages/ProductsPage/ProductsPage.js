@@ -17,19 +17,29 @@ class ProductsPage extends Component {
             filteredProducts: null,
             error: null
         };
+
+        console.log('ProductsPage - constructor');
     }
 
     componentDidMount() {
+        console.log('ProductsPage - componentDidMount');
         this.loadProducts();
     }
+    //
+    // componentDidUpdate() {
+    //     console.log('ProductsPage - componentDidUpdate');
+    // }
 
     loadProducts = () => {
         this.setState({
             isFetching: true
         });
 
+        console.log('ProductsPage - loading products');
+
         getProducts()
             .then(res => {
+                console.log('ProductsPage - products are load successfully');
                 this.setState({
                     isFetching: false,
                     products: res.Data,
@@ -94,6 +104,7 @@ class ProductsPage extends Component {
 
     render() {
         const { filteredProducts, isFetching, error } = this.state;
+        // console.log('ProductsPage - render');
 
         return (<div className='products-page'>
             {error && <div>Error: {error}</div>}

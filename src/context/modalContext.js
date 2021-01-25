@@ -28,7 +28,7 @@ class ModalContextProvider extends Component {
 
     render() {
         const value = {
-            state: this.state,
+            store: this.state,
             openModal: this.openModal,
             closeModal: this.closeModal
         };

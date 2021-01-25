@@ -33,6 +33,20 @@ class ProductModal extends Component {
             };
     }
 
+    static getDerivedStateFromProps(props, state) {
+        console.log('Product modal get derived state from props');
+
+        return null;
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        console.log('Product modal did update');
+    }
+
+    componentDidMount() {
+        console.log('Product modal did mount');
+    }
+
     componentWillUnmount() {
         console.log('Product modal will unmount');
     }
@@ -89,6 +103,8 @@ class ProductModal extends Component {
     render() {
         const { onClose, isEditMode } = this.props;
         const confirmButtonText = isEditMode ? 'Edit' : 'Create';
+
+        console.log('Product modal render');
 
         return (<ProductModalView
             product={this.state}

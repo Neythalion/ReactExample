@@ -7,8 +7,8 @@ import { modals } from '../index';
 import './BaseModal.css';
 
 const BaseModal = () => (<ModalContextConsumer>
-    {({ state }) => {
-        const { isOpen, props, type } = state;
+    {({ store }) => {
+        const { isOpen, props, type } = store;
         const ModalContent = modals[type];
 
         return (<div className={cn({ hidden: !isOpen })}>
