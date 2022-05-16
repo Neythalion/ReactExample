@@ -9,8 +9,7 @@ import './ProductModal.css';
 
 class ProductModal extends Component {
     constructor(props) {
-        super(props);
-
+        super();
         const { isEditMode, product } = props;
 
         this.state = {
@@ -91,8 +90,8 @@ class ProductModal extends Component {
         } else {
             validation.errors.forEach(err => {
                 this.setState({
-                    [err.dataPath.slice(1)]: {
-                        ...this.state[err.dataPath.slice(1)],
+                    [err.instancePath.slice(1)]: {
+                        ...this.state[err.instancePath.slice(1)],
                         error: err.message
                     }
                 });

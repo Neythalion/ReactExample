@@ -6,7 +6,7 @@ export const columns = {
     actions: 'actions'
 };
 
-export default [
+const columnDefinitions = [
     {
         column: columns.name,
         displayName: 'Product Name'
@@ -28,3 +28,5 @@ export default [
         displayName: 'Actions'
     }
 ];
+
+export default columnDefinitions;

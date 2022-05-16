@@ -1,4 +1,4 @@
-export default {
+export const modalTypes = {
     confirm: 'confirm',
     product: 'product'
 };

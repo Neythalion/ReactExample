@@ -1,4 +1,4 @@
-export default {
+export const apiMethodTypes = {
     get: 'GET',
     post: 'POST',
     put: 'PUT',

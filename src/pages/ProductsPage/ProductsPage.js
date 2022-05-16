@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { getProducts, createProduct, updateProduct, deleteProduct } from '../../api/products';
 import { ModalContext } from '../../context/modalContext';
 import ProductsPageView from './ProductsPageView';
-import modalTypes from '../../constants/modal-types';
+import { modalTypes } from '../../constants/modal-types';
 
 import './ProductsPage.css';
 

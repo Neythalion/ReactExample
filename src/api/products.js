@@ -1,5 +1,5 @@
-import apiRoutes from '../constants/api-routes';
-import apiMethodTypes from '../constants/api-method-types';
+import { apiRoutes } from '../constants/api-routes';
+import { apiMethodTypes } from '../constants/api-method-types';
 
 export const getProducts = () => {
     return fetch(apiRoutes.getProducts).then(res => res.json());
